@@ -1,20 +1,14 @@
 import Vue from "vue"
 import VueRouter, { RouteConfig } from "vue-router"
-import LandingPage from "@/screens/LandingPage.vue"
+import ListBeers from "@/screens/ListBeers.vue"
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
-    component: LandingPage,
-  },
-  {
-    path: "/beers",
     name: "Beers",
-    component: () =>
-      import(/* webpackChunkName: "ListBeers" */ "./screens/ListBeers.vue"),
+    component: ListBeers,
   },
   {
     path: "/beers/:id",
